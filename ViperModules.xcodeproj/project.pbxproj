@@ -13,6 +13,16 @@
 		AB6E66831C33344500115600 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66811C33344500115600 /* Main.storyboard */; };
 		AB6E668E1C33344500115600 /* ViperModulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E668D1C33344500115600 /* ViperModulesTests.swift */; };
 		AB6E66991C33344500115600 /* ViperModulesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66981C33344500115600 /* ViperModulesUITests.swift */; };
+		AB6E66BC1C333FB400115600 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66BB1C333FB400115600 /* FilesManager.swift */; };
+		AB6E66BE1C333FF000115600 /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66BD1C333FF000115600 /* ModuleModel.swift */; };
+		AB6E66C81C3349A600115600 /* TemplateInteractor.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C21C3349A600115600 /* TemplateInteractor.txt */; };
+		AB6E66C91C3349A600115600 /* TemplateModel.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C31C3349A600115600 /* TemplateModel.txt */; };
+		AB6E66CA1C3349A600115600 /* TemplateModule.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C41C3349A600115600 /* TemplateModule.txt */; };
+		AB6E66CB1C3349A600115600 /* TemplatePresenter.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C51C3349A600115600 /* TemplatePresenter.txt */; };
+		AB6E66CC1C3349A600115600 /* TemplateViewController.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C61C3349A600115600 /* TemplateViewController.txt */; };
+		AB6E66CD1C3349A600115600 /* TemplateWireframe.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C71C3349A600115600 /* TemplateWireframe.txt */; };
+		AB6E66D11C335BC500115600 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66D01C335BC500115600 /* Constants.swift */; };
+		AB6E66D31C3366D200115600 /* ClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66D21C3366D200115600 /* ClassGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +55,17 @@
 		AB6E66941C33344500115600 /* ViperModulesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperModulesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6E66981C33344500115600 /* ViperModulesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperModulesUITests.swift; sourceTree = "<group>"; };
 		AB6E669A1C33344500115600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6E66BB1C333FB400115600 /* FilesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
+		AB6E66BD1C333FF000115600 /* ModuleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleModel.swift; sourceTree = "<group>"; };
+		AB6E66C21C3349A600115600 /* TemplateInteractor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateInteractor.txt; sourceTree = "<group>"; };
+		AB6E66C31C3349A600115600 /* TemplateModel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateModel.txt; sourceTree = "<group>"; };
+		AB6E66C41C3349A600115600 /* TemplateModule.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateModule.txt; sourceTree = "<group>"; };
+		AB6E66C51C3349A600115600 /* TemplatePresenter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplatePresenter.txt; sourceTree = "<group>"; };
+		AB6E66C61C3349A600115600 /* TemplateViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateViewController.txt; sourceTree = "<group>"; };
+		AB6E66C71C3349A600115600 /* TemplateWireframe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateWireframe.txt; sourceTree = "<group>"; };
+		AB6E66D01C335BC500115600 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AB6E66D21C3366D200115600 /* ClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGenerator.swift; sourceTree = "<group>"; };
+		ABFC1B881C33909300323C41 /* ViperModules.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ViperModules.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +116,14 @@
 		AB6E667A1C33344500115600 /* ViperModules */ = {
 			isa = PBXGroup;
 			children = (
+				ABFC1B881C33909300323C41 /* ViperModules.entitlements */,
+				AB6E66BA1C333F9E00115600 /* Classes */,
 				AB6E667B1C33344500115600 /* AppDelegate.swift */,
 				AB6E667D1C33344500115600 /* ViewController.swift */,
 				AB6E667F1C33344500115600 /* Assets.xcassets */,
 				AB6E66811C33344500115600 /* Main.storyboard */,
 				AB6E66841C33344500115600 /* Info.plist */,
+				AB6E66C11C3349A600115600 /* Templates */,
 			);
 			path = ViperModules;
 			sourceTree = "<group>";
@@ -120,6 +144,30 @@
 				AB6E669A1C33344500115600 /* Info.plist */,
 			);
 			path = ViperModulesUITests;
+			sourceTree = "<group>";
+		};
+		AB6E66BA1C333F9E00115600 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB6E66BB1C333FB400115600 /* FilesManager.swift */,
+				AB6E66BD1C333FF000115600 /* ModuleModel.swift */,
+				AB6E66D01C335BC500115600 /* Constants.swift */,
+				AB6E66D21C3366D200115600 /* ClassGenerator.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AB6E66C11C3349A600115600 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				AB6E66C21C3349A600115600 /* TemplateInteractor.txt */,
+				AB6E66C31C3349A600115600 /* TemplateModel.txt */,
+				AB6E66C41C3349A600115600 /* TemplateModule.txt */,
+				AB6E66C51C3349A600115600 /* TemplatePresenter.txt */,
+				AB6E66C61C3349A600115600 /* TemplateViewController.txt */,
+				AB6E66C71C3349A600115600 /* TemplateWireframe.txt */,
+			);
+			path = Templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +238,12 @@
 				TargetAttributes = {
 					AB6E66771C33344500115600 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = AW5294H98V;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					AB6E66881C33344500115600 = {
 						CreatedOnToolsVersion = 7.2;
@@ -226,8 +280,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6E66C91C3349A600115600 /* TemplateModel.txt in Resources */,
+				AB6E66CD1C3349A600115600 /* TemplateWireframe.txt in Resources */,
+				AB6E66CB1C3349A600115600 /* TemplatePresenter.txt in Resources */,
 				AB6E66801C33344500115600 /* Assets.xcassets in Resources */,
+				AB6E66CA1C3349A600115600 /* TemplateModule.txt in Resources */,
 				AB6E66831C33344500115600 /* Main.storyboard in Resources */,
+				AB6E66C81C3349A600115600 /* TemplateInteractor.txt in Resources */,
+				AB6E66CC1C3349A600115600 /* TemplateViewController.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6E66D11C335BC500115600 /* Constants.swift in Sources */,
 				AB6E667E1C33344500115600 /* ViewController.swift in Sources */,
+				AB6E66D31C3366D200115600 /* ClassGenerator.swift in Sources */,
 				AB6E667C1C33344500115600 /* AppDelegate.swift in Sources */,
+				AB6E66BC1C333FB400115600 /* FilesManager.swift in Sources */,
+				AB6E66BE1C333FF000115600 /* ModuleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,11 +448,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ViperModules/ViperModules.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ViperModules/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jpachecou.ios.ViperModules;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -396,11 +465,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ViperModules/ViperModules.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ViperModules/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jpachecou.ios.ViperModules;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -475,6 +549,7 @@
 				AB6E669F1C33344500115600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB6E66A01C33344500115600 /* Build configuration list for PBXNativeTarget "ViperModulesTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +558,7 @@
 				AB6E66A21C33344500115600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB6E66A31C33344500115600 /* Build configuration list for PBXNativeTarget "ViperModulesUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +567,7 @@
 				AB6E66A51C33344500115600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
