@@ -1,5 +1,5 @@
 //
-//  {{module_name}}Module.swift
+//  {{module_name}}Wireframe.swift
 //  {{project_name}}
 //
 //  Created by {{developer_name}} on {{current_date}}.

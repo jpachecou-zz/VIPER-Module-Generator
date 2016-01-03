@@ -8,10 +8,19 @@
 
 import Cocoa
 
+enum FilesManagerType {
+    case File
+    case Folder
+    case Invalid
+}
+
 class FilesManager {
     
     var moduleModel: ModuleModel
     private var baseURL: String?
+    private var templatePath: NSURL! {
+        get { return NSBundle.mainBundle().URLForResource("Templates", withExtension: nil)! }
+    }
     
     init(moduleModel: ModuleModel) {
         self.moduleModel = moduleModel
@@ -19,20 +28,32 @@ class FilesManager {
     
     func generateModule() {
         self.loadBaseFolder { path in
-            self.createFolders((path, self.moduleModel.moduleName))
-            self.createFolders((path, self.moduleModel.moduleName))
+            self.createFolders((path, self.moduleModel))
+            self.createFolders((path, self.moduleModel))
         }
     }
     
-    private func createFolders(params: (baseUrl: NSURL?, moduleName: String)) {
-        guard var baseUrl = params.baseUrl else { return }
-        baseUrl = ModuleFolders.DefaultFolder(baseUrl: baseUrl, moduleName: params.moduleName).URL
-        self.baseURL = baseUrl.path
-        for url in self.getAllFolderURLS(baseUrl) {
-            self.createFolder(url)
-        }
-        for file in self.getAllFilesURLS(baseUrl, module: self.moduleModel) {
-            ClassGenerator.generateClass(file, model: self.moduleModel)
+    private func createFolders(params: (baseUrl: NSURL?, model: ModuleModel)) {
+        guard let baseUrl = params.baseUrl?.URLByAppendingPathComponent(params.model.moduleName) else { return }
+        self.createFolder(baseUrl)
+        guard let enumerator = NSFileManager.defaultManager().enumeratorAtURL(self.templatePath,
+            includingPropertiesForKeys: [NSURLIsDirectoryKey],
+            options: NSDirectoryEnumerationOptions.init(rawValue: 0), errorHandler:  { _, _ in return true })
+            else { return }
+        for url in enumerator {
+            guard let url = url as? NSURL else { break }
+            let fileType = FilesManager.isPathDirectory(url.path ?? "")
+            let fileName: String? = (fileType == .File ? params.model.moduleName : nil)
+            if let fileUrl = self.getNewUrlWithBase(baseUrl, template: url, fileName: fileName) {
+                print(fileUrl)
+                switch fileType {
+                case .Folder:
+                    self.createFolder(fileUrl)
+                case .File:
+                    ClassGenerator.generateClass(fileUrl, templateUrl: url, model: params.model)
+                default: break
+                }
+            }
         }
         self.showResults(baseUrl)
     }
@@ -48,6 +69,23 @@ class FilesManager {
         }
     }
 
+    private func getNewUrlWithBase(base: NSURL, template: NSURL, fileName: String?) -> NSURL? {
+        guard let templateBasePath = self.templatePath.path else { return nil }
+        guard let templatePath = template.path else { return nil }
+        let range = Range<String.Index>(start: templateBasePath.endIndex, end: templatePath.endIndex)
+        let newPath = templatePath[range]
+        let newUrl = base.URLByAppendingPathComponent(newPath)
+        
+        if let fileName = fileName {
+            guard var lastPathComponent = newUrl.lastPathComponent else { return newUrl }
+            lastPathComponent = lastPathComponent.stringByReplacingOccurrencesOfString("Template", withString: fileName)
+            lastPathComponent = (lastPathComponent as NSString).stringByDeletingPathExtension
+            lastPathComponent += ".swift"
+            return newUrl.URLByDeletingLastPathComponent?.URLByAppendingPathComponent(lastPathComponent)
+        }
+        
+        return newUrl
+    }
     
     private func loadBaseFolder(callback: (path: NSURL) -> Void) {
         let panel = NSOpenPanel()
@@ -62,44 +100,22 @@ class FilesManager {
             }
         }
     }
-    
 }
 
 // Utils
 
 extension FilesManager {
     
-    func getAllFolderURLS(baseUrl: NSURL) -> [NSURL] {
-        let UIFolder = ModuleFolders.UIFolder(baseUrl)
-        let ViewsFolder = ModuleFolders.ViewsFolder(UIFolder)
-        return [
-            baseUrl,
-            ModuleFolders.DataFolder(baseUrl).URL,
-            ModuleFolders.LogicFolder(baseUrl).URL,
-            ModuleFolders.ModuleFolder(baseUrl).URL,
-            UIFolder.URL,
-            ModuleFolders.PresenterFolder(UIFolder).URL,
-            ModuleFolders.RoutingFolder(UIFolder).URL,
-            ViewsFolder.URL,
-            ModuleFolders.ControllersFolder(ViewsFolder).URL
-        ]
-    }
-    
-    func getAllFilesURLS(baseUrl: NSURL, module: ModuleModel) -> [ModuleFiles] {
-        return [
-            ModuleFiles.ModelFile(baseURL: baseUrl, module: module),
-            ModuleFiles.InteractorFile(baseURL: baseUrl, module: module),
-            ModuleFiles.ModuleFile(baseURL: baseUrl, module: module),
-            ModuleFiles.PresenterFile(baseURL: baseUrl, module: module),
-            ModuleFiles.WireframeFile(baseURL: baseUrl, module: module),
-            ModuleFiles.ViewControllerFile(baseURL: baseUrl, module: module)
-        ]
-    }
-    
     func showResults(baseUrl: NSURL) {
         guard let path = baseUrl.path?.stringByAppendingString("/") else { return }
         NSWorkspace.sharedWorkspace().selectFile(nil, inFileViewerRootedAtPath: path)
-
     }
     
+    class func isPathDirectory(path: String) -> FilesManagerType {
+        var isDirectory: ObjCBool = ObjCBool(false)
+        if NSFileManager.defaultManager().fileExistsAtPath(path, isDirectory: &isDirectory) {
+            return isDirectory.boolValue ? .Folder : .File
+        }
+        return .Invalid
+    }
 }

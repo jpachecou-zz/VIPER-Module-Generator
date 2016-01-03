@@ -1,5 +1,5 @@
 //
-//  {{module_name}}Module.swift
+//  {{module_name}}ViewController.swift
 //  {{project_name}}
 //
 //  Created by {{developer_name}} on {{current_date}}.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-protocol {{module_name}}InteractorInput {
+protocol {{module_name}}UserInterface {
     
 }
 
-class {{module_name}}Interactor: {{module_name}}InteractorInput {
+class {{module_name}}ViewController: UIViewController, {{module_name}}UserInterface {
 
-    var output: {{module_name}}InteractorOutput?
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
 }
