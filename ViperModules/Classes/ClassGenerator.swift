@@ -18,27 +18,14 @@ private enum ClassGeneratorKeys: String {
 
 class ClassGenerator {
 
-    class func generateClass(file: ModuleFiles, model: ModuleModel) {
-        switch file {
-        case .ModelFile(_, let moduleModel):
-            self.generateFile(ModuleFileNames.ModelFileName.rawValue, urlFile: file.URL, model: moduleModel)
-        case .InteractorFile(_, let moduleModel):
-            self.generateFile(ModuleFileNames.InteractorFileName.rawValue, urlFile: file.URL, model: moduleModel)
-        case .ModuleFile(_, let moduleModel):
-            self.generateFile(ModuleFileNames.ModuleFileName.rawValue, urlFile: file.URL, model: moduleModel)
-        case .PresenterFile(_, let moduleModel):
-            self.generateFile(ModuleFileNames.PresenterFileName.rawValue, urlFile: file.URL, model: moduleModel)
-        case .WireframeFile(_, let moduleModel):
-            self.generateFile(ModuleFileNames.WireframeFileName.rawValue, urlFile: file.URL, model: moduleModel)
-        case .ViewControllerFile(_, let moduleModel):
-            self.generateFile(ModuleFileNames.ViewControllerFileName.rawValue, urlFile: file.URL, model: moduleModel)
-        }
+    class func generateClass(fileUrl: NSURL, templateUrl: NSURL, model: ModuleModel) {
+        self.generateFile(templateUrl, urlFile: fileUrl, model: model)
     }
     
-    private class func generateFile(key: String, urlFile: NSURL, model: ModuleModel) {
+    private class func generateFile(templateUrl: NSURL, urlFile: NSURL, model: ModuleModel) {
         self.createFile(urlFile)
         guard let path = urlFile.path else { return }
-        guard let templatePath = getTemplatePathForBundle(key) else { return }
+        guard let templatePath = templateUrl.path else { return }
         if var text = self.readFileTemplate(templatePath) {
             self.replaceModuleNames(&text, model: model)
             self.writeFile(path, text: text)
@@ -52,10 +39,6 @@ class ClassGenerator {
         if !fileManager.fileExistsAtPath(path) {
             fileManager.createFileAtPath(path, contents: nil, attributes: nil)
         }
-    }
-    
-    private class func getTemplatePathForBundle(key: String) -> String? {
-        return NSBundle.mainBundle().pathForResource("Template\(key)", ofType: "txt")
     }
     
     private class func replaceModuleNames(inout text: String, model: ModuleModel) {

@@ -1,5 +1,5 @@
 //
-//  {{module_name}}Module.swift
+//  {{module_name}}Model.swift
 //  {{project_name}}
 //
 //  Created by {{developer_name}} on {{current_date}}.
@@ -8,14 +8,8 @@
 
 import UIKit
 
-protocol {{module_name}}UserInterface {
+protocol {{module_name}}Model {
+
+    //var helloWorld: String { get }
     
-}
-
-class {{module_name}}ViewController: UIViewController, {{module_name}}UserInterface {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 }

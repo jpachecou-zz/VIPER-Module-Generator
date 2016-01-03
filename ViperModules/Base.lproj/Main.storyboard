@@ -711,7 +711,7 @@
                                     <constraint firstAttribute="height" constant="26" id="0hY-iq-JTS"/>
                                     <constraint firstAttribute="width" constant="192" id="AAe-vH-0Bf"/>
                                 </constraints>
-                                <buttonCell key="cell" type="roundRect" title="VIPER Module Generate" bezelStyle="roundedRect" image="F5992B08-EBB1-4165-B2DD-A8F5947BB9D1" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="3KE-NF-tUV">
+                                <buttonCell key="cell" type="roundRect" title="VIPER Module Generate" bezelStyle="roundedRect" image="823E415C-ACB5-448F-BF2B-96C70F4E5C8A" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="3KE-NF-tUV">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="16" name="AppleSDGothicNeo-Regular"/>
                                     <connections>
@@ -741,7 +741,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="F5992B08-EBB1-4165-B2DD-A8F5947BB9D1" width="1" height="1">
+        <image name="823E415C-ACB5-448F-BF2B-96C70F4E5C8A" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

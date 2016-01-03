@@ -1,5 +1,5 @@
 //
-//  {{module_name}}Module.swift
+//  {{module_name}}Interactor.swift
 //  {{project_name}}
 //
 //  Created by {{developer_name}} on {{current_date}}.
@@ -8,8 +8,12 @@
 
 import UIKit
 
-protocol {{module_name}}Model {
+protocol {{module_name}}InteractorInput {
+    
+}
 
-    //var helloWorld: String { get }
+class {{module_name}}Interactor: {{module_name}}InteractorInput {
+
+    var output: {{module_name}}InteractorOutput?
     
 }

@@ -1,5 +1,5 @@
 //
-//  {{module_name}}Module.swift
+//  {{module_name}}Presenter.swift
 //  {{project_name}}
 //
 //  Created by {{developer_name}} on {{current_date}}.
@@ -19,7 +19,7 @@ protocol {{module_name}}InteractorOutput {
 class {{module_name}}Presenter: {{module_name}}PresenterInterface, {{module_name}}InteractorOutput {
     
     var interactor:     {{module_name}}InteractorInput?
-    var routing:        {{module_name}}Wireframe?
+    var wireframe:      {{module_name}}Wireframe?
     var userInterface:  {{module_name}}UserInterface?
     
 }

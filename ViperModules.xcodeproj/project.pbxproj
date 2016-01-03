@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0C0BF31C383EF10075A2A3 /* Templates in Resources */ = {isa = PBXBuildFile; fileRef = AB0C0BF21C383EF10075A2A3 /* Templates */; };
 		AB6E667C1C33344500115600 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E667B1C33344500115600 /* AppDelegate.swift */; };
 		AB6E667E1C33344500115600 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E667D1C33344500115600 /* ViewController.swift */; };
 		AB6E66801C33344500115600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6E667F1C33344500115600 /* Assets.xcassets */; };
@@ -15,12 +16,6 @@
 		AB6E66991C33344500115600 /* ViperModulesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66981C33344500115600 /* ViperModulesUITests.swift */; };
 		AB6E66BC1C333FB400115600 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66BB1C333FB400115600 /* FilesManager.swift */; };
 		AB6E66BE1C333FF000115600 /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66BD1C333FF000115600 /* ModuleModel.swift */; };
-		AB6E66C81C3349A600115600 /* TemplateInteractor.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C21C3349A600115600 /* TemplateInteractor.txt */; };
-		AB6E66C91C3349A600115600 /* TemplateModel.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C31C3349A600115600 /* TemplateModel.txt */; };
-		AB6E66CA1C3349A600115600 /* TemplateModule.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C41C3349A600115600 /* TemplateModule.txt */; };
-		AB6E66CB1C3349A600115600 /* TemplatePresenter.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C51C3349A600115600 /* TemplatePresenter.txt */; };
-		AB6E66CC1C3349A600115600 /* TemplateViewController.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C61C3349A600115600 /* TemplateViewController.txt */; };
-		AB6E66CD1C3349A600115600 /* TemplateWireframe.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB6E66C71C3349A600115600 /* TemplateWireframe.txt */; };
 		AB6E66D11C335BC500115600 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66D01C335BC500115600 /* Constants.swift */; };
 		AB6E66D31C3366D200115600 /* ClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66D21C3366D200115600 /* ClassGenerator.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB0C0BF21C383EF10075A2A3 /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Templates; sourceTree = "<group>"; };
 		AB6E66781C33344500115600 /* ViperModules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperModules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6E667B1C33344500115600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6E667D1C33344500115600 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,12 +53,6 @@
 		AB6E669A1C33344500115600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6E66BB1C333FB400115600 /* FilesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		AB6E66BD1C333FF000115600 /* ModuleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleModel.swift; sourceTree = "<group>"; };
-		AB6E66C21C3349A600115600 /* TemplateInteractor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateInteractor.txt; sourceTree = "<group>"; };
-		AB6E66C31C3349A600115600 /* TemplateModel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateModel.txt; sourceTree = "<group>"; };
-		AB6E66C41C3349A600115600 /* TemplateModule.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateModule.txt; sourceTree = "<group>"; };
-		AB6E66C51C3349A600115600 /* TemplatePresenter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplatePresenter.txt; sourceTree = "<group>"; };
-		AB6E66C61C3349A600115600 /* TemplateViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateViewController.txt; sourceTree = "<group>"; };
-		AB6E66C71C3349A600115600 /* TemplateWireframe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemplateWireframe.txt; sourceTree = "<group>"; };
 		AB6E66D01C335BC500115600 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AB6E66D21C3366D200115600 /* ClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGenerator.swift; sourceTree = "<group>"; };
 		ABFC1B881C33909300323C41 /* ViperModules.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ViperModules.entitlements; sourceTree = "<group>"; };
@@ -123,7 +113,7 @@
 				AB6E667F1C33344500115600 /* Assets.xcassets */,
 				AB6E66811C33344500115600 /* Main.storyboard */,
 				AB6E66841C33344500115600 /* Info.plist */,
-				AB6E66C11C3349A600115600 /* Templates */,
+				AB0C0BF21C383EF10075A2A3 /* Templates */,
 			);
 			path = ViperModules;
 			sourceTree = "<group>";
@@ -155,19 +145,6 @@
 				AB6E66D21C3366D200115600 /* ClassGenerator.swift */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		AB6E66C11C3349A600115600 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				AB6E66C21C3349A600115600 /* TemplateInteractor.txt */,
-				AB6E66C31C3349A600115600 /* TemplateModel.txt */,
-				AB6E66C41C3349A600115600 /* TemplateModule.txt */,
-				AB6E66C51C3349A600115600 /* TemplatePresenter.txt */,
-				AB6E66C61C3349A600115600 /* TemplateViewController.txt */,
-				AB6E66C71C3349A600115600 /* TemplateWireframe.txt */,
-			);
-			path = Templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,14 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6E66C91C3349A600115600 /* TemplateModel.txt in Resources */,
-				AB6E66CD1C3349A600115600 /* TemplateWireframe.txt in Resources */,
-				AB6E66CB1C3349A600115600 /* TemplatePresenter.txt in Resources */,
+				AB0C0BF31C383EF10075A2A3 /* Templates in Resources */,
 				AB6E66801C33344500115600 /* Assets.xcassets in Resources */,
-				AB6E66CA1C3349A600115600 /* TemplateModule.txt in Resources */,
 				AB6E66831C33344500115600 /* Main.storyboard in Resources */,
-				AB6E66C81C3349A600115600 /* TemplateInteractor.txt in Resources */,
-				AB6E66CC1C3349A600115600 /* TemplateViewController.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
