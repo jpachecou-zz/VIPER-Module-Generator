@@ -14,12 +14,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var projectNameCell:         NSFormCell!
     @IBOutlet weak var developerNameCell:       NSFormCell!
     @IBOutlet weak var organizationNameCell:    NSFormCell!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
 
     override var representedObject: AnyObject? {
         didSet {
