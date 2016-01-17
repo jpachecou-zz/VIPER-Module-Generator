@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/jpachecou/VIPER-Module-Generator.svg?branch=develop)](https://travis-ci.org/jpachecou/VIPER-Module-Generator)
 ![](https://img.shields.io/badge/plataform-osx-lightgrey.svg)
-[![Code coverage status](https://img.shields.io/codecov/c/github/jpachecou/VIPER-Module-generator.svg?style=flat-square)](http://codecov.io/github/jpachecou/VIPER-Module-generator)
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/jpachecou/VIPER-Module-Generator/blob/master/LICENSE.md)
+[![Code coverage status](https://img.shields.io/codecov/c/github/jpachecou/VIPER-Module-generator.svg)](http://codecov.io/github/jpachecou/VIPER-Module-generator)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jpachecou/VIPER-Module-Generator/blob/master/LICENSE.md)
 
 ##Description
 
