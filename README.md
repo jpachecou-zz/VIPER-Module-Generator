@@ -3,8 +3,11 @@
 [![Build Status](https://travis-ci.org/jpachecou/VIPER-Module-Generator.svg?branch=develop)](https://travis-ci.org/jpachecou/VIPER-Module-Generator)
 ![](https://img.shields.io/badge/plataform-osx-lightgrey.svg)
 [![Code coverage status](https://img.shields.io/codecov/c/github/jpachecou/VIPER-Module-generator.svg?style=flat-square)](http://codecov.io/github/jpachecou/VIPER-Module-generator)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/jpachecou/VIPER-Module-Generator/blob/master/LICENSE.md)
+
 ##Description
 
+Simple Viper module generator with graphic interface easier of using
 
 ### Download in App store
 <a href="https://itunes.apple.com/us/app/viper-module-generator/id1071345094?mt=12"><img src="http://www.particlenews.com/apps/landing_downloadv2_v1.0.0.3/landing_downloadv2_ios_download.svg" alt="Download to App Store" width="120" height="40"></a>
@@ -39,4 +42,4 @@ It is the easiest way to create a module VIPER
 4. Drag the module to the project
 5. Ready!!! 🍻🍻🍻
 
-Download the last version [here](https://github.com/jpachecou/VIPER-Module-Generator/releases)
+Download the last release [here](https://github.com/jpachecou/VIPER-Module-Generator/releases)
