@@ -1,5 +1,6 @@
 language: objective-c
 osx_image: xcode7.2
-xcode_project: ViperModules.xcodeproj
-xcode_scheme: ViperModulesTests
-xcode_sdk: macosx10.11
+script: 
+  - xctool -project ViperModules.xcodeproj -scheme ViperModulesTests build test -sdk macosx10.11 GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
