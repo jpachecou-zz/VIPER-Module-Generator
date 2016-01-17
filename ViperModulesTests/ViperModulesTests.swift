@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import ViperModules
 
 class ViperModulesTests: XCTestCase {
     
