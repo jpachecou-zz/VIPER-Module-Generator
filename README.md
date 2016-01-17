@@ -1,5 +1,6 @@
 # VIPER Module Generator
 
+![Swift](https://img.shields.io/badge/Swift-2.1-orange.svg)
 [![Build Status](https://travis-ci.org/jpachecou/VIPER-Module-Generator.svg?branch=master)](https://travis-ci.org/jpachecou/VIPER-Module-Generator)
 ![](https://img.shields.io/badge/plataform-osx-lightgrey.svg)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jpachecou/VIPER-Module-Generator/blob/master/LICENSE.md)
