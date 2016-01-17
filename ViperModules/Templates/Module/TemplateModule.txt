@@ -27,7 +27,7 @@ class {{module_name}}Module {
         // Connect module
         module.interactor?.output       = module.presenter
         module.presenter?.interactor    = module.interactor
-        module.presenter?.routing       = module.wireframe
+        module.presenter?.wireframe     = module.wireframe
         module.wireframe?.presenter     = module.presenter
     
         return module
