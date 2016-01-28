@@ -40,6 +40,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AB6E66881C33344500115600"
+            BuildableName = "ViperModulesTests.xctest"
+            BlueprintName = "ViperModulesTests"
+            ReferencedContainer = "container:ViperModules.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

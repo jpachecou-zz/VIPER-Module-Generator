@@ -1,0 +1,33 @@
+//
+//  {{module_name}}Presenter.swift
+//  {{project_name}}
+//
+//  Created by {{developer_name}} on {{current_date}}.
+//  Copyright © 2016 {{organization_name}}. All rights reserved.
+//
+
+import Foundation
+
+protocol {{module_name}}PresenterOutputInterface: class {
+    
+}
+
+protocol {{module_name}}PresenterInterface: class {
+    
+}
+
+class {{module_name}}Presenter {
+    
+    var interactor: {{module_name}}InteractorInputInterface?
+    var route: {{module_name}}Routing?
+    weak var userInterface: {{module_name}}VCInterface?
+    
+}
+
+extension {{module_name}}Presenter: {{module_name}}PresenterInterface {
+
+}
+
+extension {{module_name}}Presenter: {{module_name}}PresenterOutputInterface {
+    
+}

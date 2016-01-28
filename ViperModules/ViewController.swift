@@ -6,14 +6,14 @@
 //  Copyright © 2015 Jonathan Pacheco. All rights reserved.
 //
 
-import Cocoa
+import Cocoa 
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var moduleNameCell:          NSFormCell!
-    @IBOutlet weak var projectNameCell:         NSFormCell!
-    @IBOutlet weak var developerNameCell:       NSFormCell!
-    @IBOutlet weak var organizationNameCell:    NSFormCell!
+    @IBOutlet weak var moduleNameTextField:          NSTextField!
+    @IBOutlet weak var projectNameTextField:         NSTextField!
+    @IBOutlet weak var developerNameTextField:       NSTextField!
+    @IBOutlet weak var organizationNameTextField:    NSTextField!
 
     override var representedObject: AnyObject? {
         didSet {
@@ -22,14 +22,44 @@ class ViewController: NSViewController {
     }
     
     @IBAction func generateModule(sender: AnyObject) {
-        let model = ModuleModel().then {
-            $0.moduleName           = self.moduleNameCell.stringValue
-            $0.projectName          = self.projectNameCell.stringValue
-            $0.developerName        = self.developerNameCell.stringValue
-            $0.organizationName     = self.organizationNameCell.stringValue
+        let moduleName           = self.moduleNameTextField.stringValue
+        let projectName          = self.projectNameTextField.stringValue
+        let developerName        = self.developerNameTextField.stringValue
+        var organizationName     = self.organizationNameTextField.stringValue
+        
+        guard moduleName.characters.count > 0 else {
+            self.showMessage("The module name cannot be empty")
+            return
         }
+        guard projectName.characters.count > 0 else {
+            self.showMessage("The project name cannot be empty")
+            return
+        }
+        guard developerName.characters.count > 0 else {
+            self.showMessage("The developer name cannot be empty")
+            return
+        }
+        if organizationName.characters.count == 0 {
+            organizationName = "Grability"
+        }
+        
+        let model = ModuleModel()
+        model.moduleName           = moduleName
+        model.projectName          = projectName
+        model.developerName        = developerName
+        model.organizationName     = organizationName
+        
         let filesManager = FilesManager(moduleModel: model)
         filesManager.generateModule()
+    }
+    
+    private func showMessage(message: String) {
+        let myPopup: NSAlert = NSAlert()
+        myPopup.messageText = "Warning"
+        myPopup.informativeText = message
+        myPopup.alertStyle = NSAlertStyle.WarningAlertStyle
+        myPopup.addButtonWithTitle("OK")
+        myPopup.runModal()
     }
 
 }

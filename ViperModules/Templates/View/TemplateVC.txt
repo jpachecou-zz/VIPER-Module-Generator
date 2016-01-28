@@ -1,0 +1,46 @@
+//
+//  {{module_name}}VC.swift
+//  {{project_name}}
+//
+//  Created by {{developer_name}} on {{current_date}}.
+//  Copyright © 2016 {{organization_name}}. All rights reserved.
+//
+
+import UIKit
+
+protocol  {{module_name}}VCInterface: class {
+}
+
+protocol {{module_name}}VCDelegate: class {
+}
+
+class {{module_name}}VC: UIViewController {
+    
+    //MARK: - Outlets
+    
+    
+    //MARK: - iVars
+    weak var delegate: {{module_name}}VCDelegate!
+    var presenter: {{module_name}}PresenterInterface?
+    
+    //MARK: - Override
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    //MARK: - Private
+    
+    //MARK: - Public
+}
+
+extension {{module_name}}VC: {{module_name}}VCInterface {
+    
+}

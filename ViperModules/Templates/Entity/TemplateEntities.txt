@@ -1,0 +1,10 @@
+//
+//  {{module_name}}Protocol.swift
+//  {{project_name}}
+//
+//  Created by {{developer_name}} on {{current_date}}.
+//  Copyright © 2016 {{organization_name}}. All rights reserved.
+//
+
+import Foundation
+import SwiftyJSON

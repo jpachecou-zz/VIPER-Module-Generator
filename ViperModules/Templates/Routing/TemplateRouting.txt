@@ -1,0 +1,17 @@
+//
+//  {{module_name}}Routing.swift
+//  {{project_name}}
+//
+//  Created by {{developer_name}} on {{current_date}}.
+//  Copyright © 2016 {{organization_name}}. All rights reserved.
+//
+
+import Foundation
+
+class {{module_name}}Routing {
+    
+    //MARK: -
+    //MARK: iVars
+    weak var vc: {{module_name}}VC?
+
+}

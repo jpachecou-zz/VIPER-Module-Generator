@@ -18,6 +18,7 @@
 		AB6E66BE1C333FF000115600 /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66BD1C333FF000115600 /* ModuleModel.swift */; };
 		AB6E66D11C335BC500115600 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66D01C335BC500115600 /* Constants.swift */; };
 		AB6E66D31C3366D200115600 /* ClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E66D21C3366D200115600 /* ClassGenerator.swift */; };
+		ABE9659E1C5AB19500488AC0 /* Grability-Logo-Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE9659D1C5AB19500488AC0 /* Grability-Logo-Normal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AB6E66BD1C333FF000115600 /* ModuleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleModel.swift; sourceTree = "<group>"; };
 		AB6E66D01C335BC500115600 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AB6E66D21C3366D200115600 /* ClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGenerator.swift; sourceTree = "<group>"; };
+		ABE9659D1C5AB19500488AC0 /* Grability-Logo-Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grability-Logo-Normal.png"; sourceTree = "<group>"; };
 		ABFC1B881C33909300323C41 /* ViperModules.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ViperModules.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		AB6E667A1C33344500115600 /* ViperModules */ = {
 			isa = PBXGroup;
 			children = (
+				ABE9659D1C5AB19500488AC0 /* Grability-Logo-Normal.png */,
 				ABFC1B881C33909300323C41 /* ViperModules.entitlements */,
 				AB6E66BA1C333F9E00115600 /* Classes */,
 				AB6E667B1C33344500115600 /* AppDelegate.swift */,
@@ -259,6 +262,7 @@
 				AB0C0BF31C383EF10075A2A3 /* Templates in Resources */,
 				AB6E66801C33344500115600 /* Assets.xcassets in Resources */,
 				AB6E66831C33344500115600 /* Main.storyboard in Resources */,
+				ABE9659E1C5AB19500488AC0 /* Grability-Logo-Normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
